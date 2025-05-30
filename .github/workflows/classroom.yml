@@ -1,0 +1,18 @@
+name: GitHub Classroom Workflow
+
+on: [push]
+
+permissions:
+  checks: write
+  actions: read
+  contents: read
+
+jobs:
+  build:
+    name: Autograding
+    # runs-on: self-hosted
+    runs-on: ubuntu-latest
+    # container: sviftel/cpptest@sha256:194867a8d1869d9ca614be2a947f49610e75887fd348e13876e31723b128a0cf
+    steps:
+      - uses: actions/checkout@v2
+      - uses: education/autograding@v1

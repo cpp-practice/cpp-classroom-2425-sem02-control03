@@ -1,0 +1,64 @@
+{
+  "tests": [
+    {
+      "name": "smoke_task_1",
+      "setup": "",
+      "run": "cmake . && make task-1-test && ./task-1-test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "smoke_task_2_functions",
+      "setup": "",
+      "run": "cmake -D CMAKE_CXX_FLAGS=-Dtask_2_functions=1 . && make task-2-test && ./task-2-test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 0.8
+    },
+    {
+      "name": "smoke_task_2_functors",
+      "setup": "",
+      "run": "cmake -D CMAKE_CXX_FLAGS=-Dtask_2_functors=1 . && make task-2-test && ./task-2-test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 0.7
+    },
+    {
+      "name": "smoke_task_2_movable_only",
+      "setup": "",
+      "run": "cmake -D CMAKE_CXX_FLAGS=-Dtask_2_movable_only=1 . && make task-2-test && ./task-2-test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 0.5
+    },
+    {
+      "name": "smoke_task_2_ncomp_functions",
+      "setup": "",
+      "run": "cmake . ; make task-2-test-ncomp-functions ; rc=$?; ( [ $rc -ne 0 ] && echo 'failed as expected' )",
+      "input": "",
+      "output": "failed as expected",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "smoke_task_2_ncomp_functors",
+      "setup": "",
+      "run": "cmake . ; make task-2-test-ncomp-functors ; rc=$?; ( [ $rc -ne 0 ] && echo 'failed as expected' )",
+      "input": "",
+      "output": "failed as expected",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    }
+  ]
+}
