@@ -14,6 +14,6 @@ endif()
 include_directories(src)
 
 add_executable(task-1-test src/task_1/smoke.cpp)
-# add_executable(task-2-test src/task_2/smoke.cpp)
+add_executable(task-2-test src/task_2/smoke.cpp)
 add_executable(task-2-test-ncomp-functions src/task_2/ncomp_functions.cpp)
 add_executable(task-2-test-ncomp-functors src/task_2/ncomp_functors.cpp)
